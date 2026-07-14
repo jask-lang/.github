@@ -34,9 +34,9 @@ struct Edible
 endstruct
 
 function shouldIEatThis(edible: Edible)
-    print(edible->number + "x " + edible->name + "? ")
+    print("{edible.number}x {edible.name}? ")
 
-    if edible->healthy == true
+    if edible.healthy == true
         print("Yes, absolutely!")
     else
         print("Oh no, I'd rather not")
@@ -45,10 +45,10 @@ function shouldIEatThis(edible: Edible)
     print("\n")
 end
 
-set apple to Edible(name = "Apple", number = 2, healthy = true)
-set pizza to Edible(name = "Pizza", number = 5)
+set apple = Edible(name = "Apple", number = 2, healthy = true)
+set pizza = Edible(name = "Pizza", number = 5)
 
-set myEdibles to list(apple, pizza)
+set myEdibles = list(apple, pizza)
 
 for edible in myEdibles
     shouldIEatThis(edible)
