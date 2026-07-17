@@ -1,10 +1,10 @@
 # Introduction
 
-pseudoscript (pssp) is a highly readable scripting language in early development, modeled after pseudo code. The pssp interpreter is fully written in C# without other dependencies. It is just a hobby project for fun and learning, contributions are always welcome!
+jask is a highly readable and safe interpreted language in early development. The interpreter is fully written in C# without other dependencies. It is just a hobby project for fun and learning, contributions are always welcome!
 
 The main goal is to keep the interpreter itself as small as possible and to implement only those functions internally that are truly necessary or that greatly affects performance.
-All other functions should be written directly in pssp to explore and expand the language's capabilities.
-A brief summary of the properties of pssp:
+All other functions should be written directly in jask to explore and expand the language's capabilities.
+A brief summary of the properties:
 * dynamically typed variables (Variables are just a container for any kind of data)
 * strongly typed values (pssp enforces strict type checking)
 * fully immutable (things in pssp cannot mutate themselves, operations always creating copies)
@@ -13,7 +13,7 @@ A brief summary of the properties of pssp:
 Seeing jask for the the first time?
 Try the [Getting started guide](TBD)!
 For further information, please visit the [Wiki](TBD).
-A collection of useful functions written in pssp can be found at [psspstdlib](TBD).
+A collection of useful functions written in jask can be found at [jasklib](TBD).
 
 # Examples
 
@@ -22,7 +22,6 @@ A collection of useful functions written in pssp can be found at [psspstdlib](TB
 set hello to "Hello, World!"
 print(hello)
 ```
-pssp aims to be highly readable, easy to maintain, and understandable to beginners. The syntax largely avoids complex notation and is modeled after natural language.
 
 ## Functions, conditions, lists, loops and structs...
 A more complex example for a direct deep-dive:
@@ -66,7 +65,7 @@ To use the interactive mode, invoke the interpreter:
 dotnet run
 ```
 Exit the interactive mode with the exit command.
-pssp can interpret files:
+jask can interpret files:
 ```pseudo
-dotnet run examples/simple.pssp
+dotnet run examples/simple.jask
 ```
