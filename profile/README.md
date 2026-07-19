@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://github.com/jask-lang/.github/blob/main/header-small.jpeg" />
-</p>
-
 jask is a highly readable and safe interpreted language in early development. The interpreter is fully written in C# without other dependencies. It is just a hobby project for fun and learning, contributions are always welcome!
 
 The main goal is to keep the interpreter itself as small as possible and to implement only those functions internally that are truly necessary or that greatly affects performance.
