@@ -1,14 +1,16 @@
-jask is a highly readable and safe interpreted language in early development. The interpreter is fully written in C# without other dependencies. It is just a hobby project for fun and learning, contributions are always welcome!
+# A secure way of scripting
+jask is a highly readable and safe interpreted language in early development. The interpreter is fully written in C# without other dependencies.
+It is a hobby project for fun and learning, so contributions are always welcome!
 
-A brief summary of the properties:
-* dynamically typed variables (variables are just a container for any kind of data)
-* strongly typed values (jask enforces strict type checking)
-* fully immutable (things in jask cannot mutate themselves, operations always creating copies)
-* data and behaviour are separated (functions are not bound to anything, data is held separated)
+A brief summary of the features of jask:
+* :star: dynamically typed variables (variables are just a container for any kind of data)
+* :muscle: strongly typed values (jask enforces strict type checking)
+* :lock: fully immutable (things in jask cannot mutate themselves, operations always creating copies)
+* :construction: data and behaviour are separated (functions are not bound to anything, data is held separated)
 
-jask is designed as a language that always prioritizes explicit actions over implicit ones. Code is always executed deterministically and, by default, runs without permissions for input and output or read and write access at the file level. These must be explicitly passed to the interpreter as arguments before each execution. This ensures that unknown code can only perform permitted actions.
+jask is designed as a language that always prioritizes **explicit** actions over **implicit** ones. Code is always executed deterministically and, by default, runs without permissions for input and output or read and write access at the file level. Permissions must be explicitly passed to the interpreter before each execution. This ensures that unknown code can only perform limited actions in a sandbox, imagine *never trust, always verify*.
 
-Find the interpreter [here](https://github.com/jask-lang/interpreter). A collection of useful functions written in jask can be found at [jcore](https://github.com/jask-lang/jcore).
+Dive right into? Find the interpreters implementation [here](https://github.com/jask-lang/interpreter). A collection of useful functions written completely in jask can be found at [jcore](https://github.com/jask-lang/jcore). Want syntax highlightning for your IDE? [We got you](https://github.com/jask-lang/syntax-highlighting).
 
 # Try jask out!
 Invoke the interactive mode directly in a terminal:
