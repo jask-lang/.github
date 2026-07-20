@@ -1,17 +1,25 @@
 jask is a highly readable and safe interpreted language in early development. The interpreter is fully written in C# without other dependencies. It is just a hobby project for fun and learning, contributions are always welcome!
 
-The main goal is to keep the interpreter itself as small as possible and to implement only those functions internally that are truly necessary or that greatly affects performance.
-All other functions should be written directly in jask to explore and expand the language's capabilities.
 A brief summary of the properties:
-* dynamically typed variables (Variables are just a container for any kind of data)
+* dynamically typed variables (variables are just a container for any kind of data)
 * strongly typed values (jask enforces strict type checking)
 * fully immutable (things in jask cannot mutate themselves, operations always creating copies)
 * data and behaviour are separated (functions are not bound to anything, data is held separated)
 
-A collection of useful functions written in jask can be found at [jcore](https://github.com/jask-lang/jcore).
+jask is designed as a language that always prioritizes explicit actions over implicit ones. Code is always executed deterministically and, by default, runs without permissions for input and output or read and write access at the file level. These must be explicitly passed to the interpreter as arguments before each execution. This ensures that unknown code can only perform permitted actions.
 
+Find the interpreter [here](https://github.com/jask-lang/interpreter). A collection of useful functions written in jask can be found at [jcore](https://github.com/jask-lang/jcore).
+
+# Try jask out!
+Invoke the interactive mode directly in a terminal:
+```terminal
+dotnet run --allow-stdout
+```
+Or pass a file:
+```terminal
+dotnet run --allow-stdout --input="example.jask"
+```
 # Now show me some code...
-
 ```python
 struct Edible
     set name    = ""
@@ -45,3 +53,4 @@ This will output
 2x Apple? Yes, absolutely!
 5x Pizza? Oh no, I'd rather not
 ```
+Be sure to pass *--allow-stdout* to the interpreter in order to use the *print* function.
