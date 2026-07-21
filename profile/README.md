@@ -12,7 +12,11 @@ A brief summary of the features of jask:
 jask is designed as a language that always prioritizes **explicit** actions over **implicit** ones. Code is always executed deterministically and, by default, runs without permissions for input and output or read and write access at the file level. Permissions must be explicitly passed to the interpreter before each execution. This ensures that unknown code can only perform limited actions in a sandbox, imagine *never trust, always verify*.
 In addition, all values coming from external sources are considered *untrusted* by default and must be checked via `verify()` or `trust()` before use.
 
-Dive right into? Find the interpreters implementation [here](https://github.com/jask-lang/interpreter). A collection of useful functions written completely in jask can be found at [jcore](https://github.com/jask-lang/jcore). Want syntax highlightning for your IDE? [We got you](https://github.com/jask-lang/syntax-highlighting).
+Dive right into? Find the interpreters implementation [here](https://github.com/jask-lang/interpreter).
+Afterwards, we recommend, that you check out our [tutorials](https://github.com/jask-lang/tutorials) to ease your introduction to the concepts of jask.
+
+A collection of useful functions written completely in jask can be found at [jcore](https://github.com/jask-lang/jcore).
+Want syntax highlightning for your IDE? [We got you](https://github.com/jask-lang/syntax-highlighting).
 
 # Try jask out!
 Invoke the interactive mode directly in a terminal:
@@ -69,3 +73,4 @@ This takes input from the user, verifies it as a string and prints:
 Cannot eat, what is not there!
 ```
 Be sure to pass *--allow-stdout* and *--allow-stdin* to the interpreter for using *print* and *readInput*.
+Want more? Take a look at our [tutorials](https://github.com/jask-lang/tutorials).
