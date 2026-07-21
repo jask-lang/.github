@@ -37,8 +37,7 @@ endstruct
 
 function shouldIEatThis(edible: Edible)
     if edible->number == 0
-        print("Cannot eat, what is not there!")
-        print("\n")
+        printLine("Cannot eat, what is not there!")
         return
     endif
 
@@ -50,7 +49,7 @@ function shouldIEatThis(edible: Edible)
         print("Oh no, I'd rather not")
     endif
 
-    print("\n")
+    printLine("")
 end
 
 set rawInput = readInput("Please enter your favourite food: ")
