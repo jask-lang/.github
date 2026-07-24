@@ -53,11 +53,16 @@ function shouldIEatThis(edible: Edible)
 end
 
 set rawInput = readInput("Please enter your favourite food: ")
-set edibleName = verify(untrusted = rawInput, pattern = "string")
+set edibleInput = verify(untrusted = rawInput, pattern = "string")
+
+if edibleInput->type == "ERR"
+    printLine("Error reading your input!")
+    return
+endif
 
 set apple  = Edible(name = "Apple", number = 2, healthy = true)
 set pizza  = Edible(name = "Pizza", number = 5)
-set myFood = Edible(name = edibleName)
+set myFood = Edible(name = edibleInput->value)
 
 set myEdibles = list(apple, pizza, myFood)
 
